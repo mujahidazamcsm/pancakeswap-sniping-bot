@@ -22,19 +22,20 @@
 
 2) Extract the bot zip / download contents to a folder, example C:\users\username\Downloads\pancakeswap-sniping-bot\
 
-3) install node dependencies
+3) install node dependencies | **do not** update anything manually during this process, only type the commands, and press enter.
     - open command prompt
-    - cd C:\users\username\Downloads\pancakeswap-sniping-bot\
-    - npm init
-    - npm install ethers
-    - npm install chalk
-    - npm install express
+    - cd C:\users\username\Downloads\pancakeswap-sniping-bot\ ENTER
+    - npm init ENTER
+    - npm install ethers ENTER
+    - npm install chalk ENTER
+    - npm install express ENTER
 
 4) open package.json file inside your directory, example C:\users\username\Downloads\pancakeswap-sniping-bot\, and make sure it contains:
     - "type": "module",
     - this should be on line 6, after the line "main": "bot.js",
     - entire package.json should be:
-        - {
+        ```
+        {
             "name": "trading-bot",
             "version": "1.0.0",
             "description": "",
@@ -49,8 +50,9 @@
                 "chalk": "^4.1.1",
                 "ethers": "^5.1.4",
                 "express": "^4.17.1"
-              }
             }
+        }
+        ```
 
 5) open bot.js and input:
     - the contract address of the token you want to purchase on line 10
