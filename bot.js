@@ -44,7 +44,14 @@ const run = async () => {
   const tokenOut = data.to_PURCHASE;
   const pairAddress = await factory.getPair(tokenIn, tokenOut);
 
-  console.log(pairAddress);
+  console.log(chalk.blue(`pairAddress: ${pairAddress}`));
+  if (pairAddress !== null && pairAddress !== undefined) {
+    console.log("pairAddress.toString().indexOf('0x0000000000000')", pairAddress.toString().indexOf('0x0000000000000'));
+    if (pairAddress.toString().indexOf('0x0000000000000') > -1) {
+      console.log(chalk.red(`pairAddress ${pairAddress} not detected. Restart me!`));
+      return;
+    }
+  }
 
   const pair = new ethers.Contract(pairAddress, ['event Mint(address indexed sender, uint amount0, uint amount1)'], account);
 
