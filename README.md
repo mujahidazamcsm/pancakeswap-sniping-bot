@@ -55,13 +55,13 @@
         ```
 
 5) open bot.js and input:
-    - the contract address of the token you want to purchase on line 10
+    - the contract address of the token you want to purchase on line 9
         - you can use BUSD as an example, as the WBNB / BUSD liquidity pool gets additions every few minutes
-    - your wallet address on line 13
-    - the amount of WBNB of the token you want to purchase on line 14
-    - the slippage required to purchase the token on pancakeswap on line 15
+    - your wallet address on line 12
+    - the amount of WBNB of the token you want to purchase on line 13
+    - the slippage required to purchase the token on pancakeswap on line 14
         - you will need to MAKE SURE the slippage is set correctly for each token you plan to purchase
-    - the seed phrase of your wallet on line 23
+    - the seed phrase of your wallet on line 22
 
 6) save the changes to bot.js
 
